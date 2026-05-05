@@ -28,35 +28,26 @@ Each value carries a witness from exhaustive Cython Redelmeier enumeration of n-
   - C2: a(n) is non-decreasing in n.
   - C3: For n >= 3, a(n) - a(n - 1) is in {0, 2}; the +4 transition at n = 2 is unique to the leading edge.
 
-## Running the solver
+## Re-verifying the proof
 
-**Requirements.** Python 3.10+, python-sat (PyPI: `python-sat`), and the external binary `drat-trim`. No WSL or LRAT toolchain required.
+Each term n = 1..20 is sandwich-proved by a CNF whose UNSAT gives the lower bound, paired with a witness JSON giving the upper bound. Both inputs are in `research/drat/`. The DRAT proof itself is not shipped (it is reproducible from the CNF in seconds-to-hours via `cadical` + `drat-trim`); a `sidecar.json` per term records the SHA-256 of the original DRAT and the run-host verdict. See [`research/drat/README.md`](research/drat/README.md) for the regen + verify command line and the witness specification.
 
-```bash
-# Witness + DRAT certificate for n = 1..20 (about 56 minutes total wall time
-# on AMD Ryzen 5 5600, dominated by the n = 19..20 enumeration phases)
-python code/solve_truncsq_shell.py --n 1-20 --per-term-timeout 3600 \
-    --emit-drat --check-drat --check-method drat
-
-# Independent witness verification (pure-Python, disjoint code path)
-python code/verify_method1.py 20
-```
+The Python under `code/` imports a private research workspace (`sat_utils`, `figure_gen_utils`) that is not published. It is shipped as a reference artefact for audit, not as a runnable package.
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `code/solve_truncsq_shell.py` | Primary solver (Cython Redelmeier enumeration + DRAT proof emission) |
-| `code/verify_method1.py` | Independent geometric witness verifier (pure-Python) |
-| `code/generate-figures.py` | Reproducible figure generator (Typst) |
-| `research/solver-results.json` | Machine-readable witnesses + structural metadata |
+| `code/solve_truncsq_shell.py` | Primary solver (reference) -- Cython Redelmeier enumeration + DRAT proof emission |
+| `code/verify_method1.py` | Independent geometric witness verifier (reference, pure-Python, disjoint code path) |
+| `code/generate-figures.py` | Reproducible figure generator (standalone, Typst) |
+| `research/solver-results.json` | Machine-readable witnesses + structural metadata for n = 1..20 |
 | `research/solver-run-log.txt` | Solver stdout log |
 | `research/verify_method1-results.json` | Geometric verifier results (every n PASS) |
-| `research/drat/` | DRAT certificates per n |
-| `research/drat-certification-summary.json` | Per-n `certified=true` summary |
-| `submission/paper.pdf` | Standalone paper |
+| `research/drat/` | CNF + witness + sidecar per n; DRATs regenerable, see folder README |
+| `research/drat-certification-summary.json` | Per-n `certified=true` summary recorded on the run host |
 | `submission/truncsq-shell-figures.pdf` | Publication figures (data table + plateau chart) |
-| `submission/oeis-draft.txt` | OEIS submission text |
+| `submission/b394511.txt` | OEIS b-file (n, a(n)) for n = 1..20 |
 
 ## Prior art and acknowledgments
 
