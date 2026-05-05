@@ -40,13 +40,10 @@ The Python under `code/` imports a private research workspace (`sat_utils`, `fig
 |------|-------------|
 | `code/solve_truncsq_shell.py` | Primary solver (reference) -- Cython Redelmeier enumeration + DRAT proof emission |
 | `code/verify_method1.py` | Independent geometric witness verifier (reference, pure-Python, disjoint code path) |
-| `code/generate-figures.py` | Reproducible figure generator (standalone, Typst) |
 | `research/solver-results.json` | Machine-readable witnesses + structural metadata for n = 1..20 |
 | `research/solver-run-log.txt` | Solver stdout log |
 | `research/verify_method1-results.json` | Geometric verifier results (every n PASS) |
 | `research/drat/` | CNF + witness + sidecar per n; DRATs regenerable, see folder README |
-| `research/drat-certification-summary.json` | Per-n `certified=true` summary recorded on the run host |
-| `submission/truncsq-shell-figures.pdf` | Publication figures (data table + plateau chart) |
 | `submission/b394511.txt` | OEIS b-file (n, a(n)) for n = 1..20 |
 
 ## Prior art and acknowledgments
