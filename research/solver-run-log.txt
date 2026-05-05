@@ -1,0 +1,24 @@
+======================================================================
+OEIS NEW -- Minimum enclosing shell on truncated square tiling (4.8.8)
+Redelmeier enumeration + bridge-gap shell (corona on 4.8.8)
+======================================================================
+  Software: solve_truncsq_shell.py via ShellSolverFramework
+  Hardware: AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD, Windows 11
+  Date: 2026-05-02
+  NO pre-primed values. All values derived from scratch.
+  Range: 1
+    Tiling radius: 8
+    Cells: 512
+    Tiling build time: 0.0s
+
+    Result: a(1) = 4  [0.0s]  PROVED
+
+======================================================================
+RESULTS SUMMARY
+======================================================================
+    n   a(n)        Box     p_min     delta     comps      Time  Status
+  ---  -----  ---------  --------  --------  --------  --------  ------
+    1      4                 None      None         1      0.0s  PROVED
+
+  Total time: 0.0s
+

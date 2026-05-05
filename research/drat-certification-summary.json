@@ -1,0 +1,182 @@
+{
+  "1": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n1_k3.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n1_k3.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n1_k3.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "2": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n2_k7.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n2_k7.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n2_k7.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "3": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n3_k7.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n3_k7.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n3_k7.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "4": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n4_k7.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n4_k7.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n4_k7.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "5": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n5_k7.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n5_k7.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n5_k7.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "6": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n6_k9.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n6_k9.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n6_k9.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "7": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n7_k9.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n7_k9.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n7_k9.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "8": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n8_k9.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n8_k9.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n8_k9.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "9": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n9_k11.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n9_k11.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n9_k11.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "10": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n10_k11.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n10_k11.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n10_k11.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "11": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n11_k11.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n11_k11.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n11_k11.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "12": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n12_k11.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n12_k11.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n12_k11.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "13": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n13_k11.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n13_k11.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n13_k11.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "14": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n14_k13.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n14_k13.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n14_k13.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "15": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n15_k13.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n15_k13.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n15_k13.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "16": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n16_k13.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n16_k13.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n16_k13.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "17": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n17_k13.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n17_k13.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n17_k13.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "18": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n18_k13.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n18_k13.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n18_k13.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "19": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n19_k15.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n19_k15.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n19_k15.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  },
+  "20": {
+    "certified": true,
+    "cnf_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n20_k15.cnf",
+    "drat_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n20_k15.drat",
+    "lrat_path": null,
+    "sidecar_path": "C:\\Users\\obnox\\Documents\\Other-Projects\\research-outputs\\paper-project\\oeis-new-truncated-square-shell\\research\\drat\\n20_k15.sidecar.json",
+    "check_method": "drat",
+    "error": null
+  }
+}

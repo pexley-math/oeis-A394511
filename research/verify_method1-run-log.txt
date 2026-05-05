@@ -1,0 +1,30 @@
+verify_method1 run log -- truncated-square (4.8.8) shell witness verifier
+======================================================================
+Method: geometric witness verification on the truncated-square (4.8.8) tiling: independent vertex-intersection face adjacency, BFS connectivity, set-inclusion corona check (pure Python, no SAT, no solver imports)
+Timestamp: 2026-05-02T15:11:51
+Tiling radius: 8
+Per-term timeout: 3600.0 s
+Overall: PASS
+
+  [PASS] n=1: hole connected (|H|=1), shell connected (|S|=4=4), corona (4 cells) contained in shell  [0.00s]
+  [PASS] n=2: hole connected (|H|=2), shell connected (|S|=8=8), corona (8 cells) contained in shell  [0.00s]
+  [PASS] n=3: hole connected (|H|=3), shell connected (|S|=8=8), corona (8 cells) contained in shell  [0.00s]
+  [PASS] n=4: hole connected (|H|=4), shell connected (|S|=8=8), corona (8 cells) contained in shell  [0.00s]
+  [PASS] n=5: hole connected (|H|=5), shell connected (|S|=8=8), corona (8 cells) contained in shell  [0.00s]
+  [PASS] n=6: hole connected (|H|=6), shell connected (|S|=10=10), corona (10 cells) contained in shell  [0.00s]
+  [PASS] n=7: hole connected (|H|=7), shell connected (|S|=10=10), corona (10 cells) contained in shell  [0.00s]
+  [PASS] n=8: hole connected (|H|=8), shell connected (|S|=10=10), corona (10 cells) contained in shell  [0.00s]
+  [PASS] n=9: hole connected (|H|=9), shell connected (|S|=12=12), corona (12 cells) contained in shell  [0.01s]
+  [PASS] n=10: hole connected (|H|=10), shell connected (|S|=12=12), corona (12 cells) contained in shell  [0.00s]
+  [PASS] n=11: hole connected (|H|=11), shell connected (|S|=12=12), corona (12 cells) contained in shell  [0.00s]
+  [PASS] n=12: hole connected (|H|=12), shell connected (|S|=12=12), corona (12 cells) contained in shell  [0.00s]
+  [PASS] n=13: hole connected (|H|=13), shell connected (|S|=12=12), corona (12 cells) contained in shell  [0.00s]
+  [PASS] n=14: hole connected (|H|=14), shell connected (|S|=14=14), corona (14 cells) contained in shell  [0.00s]
+  [PASS] n=15: hole connected (|H|=15), shell connected (|S|=14=14), corona (14 cells) contained in shell  [0.00s]
+  [PASS] n=16: hole connected (|H|=16), shell connected (|S|=14=14), corona (14 cells) contained in shell  [0.00s]
+  [PASS] n=17: hole connected (|H|=17), shell connected (|S|=14=14), corona (14 cells) contained in shell  [0.00s]
+  [PASS] n=18: hole connected (|H|=18), shell connected (|S|=14=14), corona (14 cells) contained in shell  [0.00s]
+  [PASS] n=19: hole connected (|H|=19), shell connected (|S|=16=16), corona (16 cells) contained in shell  [0.00s]
+  [PASS] n=20: hole connected (|H|=20), shell connected (|S|=16=16), corona (16 cells) contained in shell  [0.00s]
+
+Disjoint code path: pure-Python BFS + vertex-intersection adjacency. Solver path: ShellSolverFramework + Cython Redelmeier enumeration.

@@ -1,0 +1,210 @@
+{
+  "verifier": "verify_method1",
+  "method": "geometric witness verification on the truncated-square (4.8.8) tiling: independent vertex-intersection face adjacency, BFS connectivity, set-inclusion corona check (pure Python, no SAT, no solver imports)",
+  "timestamp": "2026-05-02T15:11:51",
+  "tiling_radius": 8,
+  "per_term_timeout_s": 3600.0,
+  "overall_status": "PASS",
+  "results": [
+    {
+      "n": 1,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=1: hole connected (|H|=1), shell connected (|S|=4=4), corona (4 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 1,
+      "shell_size": 4,
+      "corona_size": 4
+    },
+    {
+      "n": 2,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=2: hole connected (|H|=2), shell connected (|S|=8=8), corona (8 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 2,
+      "shell_size": 8,
+      "corona_size": 8
+    },
+    {
+      "n": 3,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=3: hole connected (|H|=3), shell connected (|S|=8=8), corona (8 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 3,
+      "shell_size": 8,
+      "corona_size": 8
+    },
+    {
+      "n": 4,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=4: hole connected (|H|=4), shell connected (|S|=8=8), corona (8 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 4,
+      "shell_size": 8,
+      "corona_size": 8
+    },
+    {
+      "n": 5,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=5: hole connected (|H|=5), shell connected (|S|=8=8), corona (8 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 5,
+      "shell_size": 8,
+      "corona_size": 8
+    },
+    {
+      "n": 6,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=6: hole connected (|H|=6), shell connected (|S|=10=10), corona (10 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 6,
+      "shell_size": 10,
+      "corona_size": 10
+    },
+    {
+      "n": 7,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=7: hole connected (|H|=7), shell connected (|S|=10=10), corona (10 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 7,
+      "shell_size": 10,
+      "corona_size": 10
+    },
+    {
+      "n": 8,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=8: hole connected (|H|=8), shell connected (|S|=10=10), corona (10 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 8,
+      "shell_size": 10,
+      "corona_size": 10
+    },
+    {
+      "n": 9,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=9: hole connected (|H|=9), shell connected (|S|=12=12), corona (12 cells) contained in shell",
+      "elapsed": 0.013666868209838867,
+      "hole_size": 9,
+      "shell_size": 12,
+      "corona_size": 12
+    },
+    {
+      "n": 10,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=10: hole connected (|H|=10), shell connected (|S|=12=12), corona (12 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 10,
+      "shell_size": 12,
+      "corona_size": 12
+    },
+    {
+      "n": 11,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=11: hole connected (|H|=11), shell connected (|S|=12=12), corona (12 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 11,
+      "shell_size": 12,
+      "corona_size": 12
+    },
+    {
+      "n": 12,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=12: hole connected (|H|=12), shell connected (|S|=12=12), corona (12 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 12,
+      "shell_size": 12,
+      "corona_size": 12
+    },
+    {
+      "n": 13,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=13: hole connected (|H|=13), shell connected (|S|=12=12), corona (12 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 13,
+      "shell_size": 12,
+      "corona_size": 12
+    },
+    {
+      "n": 14,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=14: hole connected (|H|=14), shell connected (|S|=14=14), corona (14 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 14,
+      "shell_size": 14,
+      "corona_size": 14
+    },
+    {
+      "n": 15,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=15: hole connected (|H|=15), shell connected (|S|=14=14), corona (14 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 15,
+      "shell_size": 14,
+      "corona_size": 14
+    },
+    {
+      "n": 16,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=16: hole connected (|H|=16), shell connected (|S|=14=14), corona (14 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 16,
+      "shell_size": 14,
+      "corona_size": 14
+    },
+    {
+      "n": 17,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=17: hole connected (|H|=17), shell connected (|S|=14=14), corona (14 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 17,
+      "shell_size": 14,
+      "corona_size": 14
+    },
+    {
+      "n": 18,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=18: hole connected (|H|=18), shell connected (|S|=14=14), corona (14 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 18,
+      "shell_size": 14,
+      "corona_size": 14
+    },
+    {
+      "n": 19,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=19: hole connected (|H|=19), shell connected (|S|=16=16), corona (16 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 19,
+      "shell_size": 16,
+      "corona_size": 16
+    },
+    {
+      "n": 20,
+      "ok": true,
+      "status": "PASS",
+      "detail": "n=20: hole connected (|H|=20), shell connected (|S|=16=16), corona (16 cells) contained in shell",
+      "elapsed": 0.0,
+      "hole_size": 20,
+      "shell_size": 16,
+      "corona_size": 16
+    }
+  ]
+}
