@@ -4,9 +4,11 @@ Solver code and data for [OEIS A394511](https://oeis.org/A394511).
 
 ## The Problem
 
-For an integer `n >= 1`, let `a(n)` be the minimum number of cells in a connected enclosing shell of an `n`-cell connected hole on the truncated-square (4.8.8) Archimedean tiling. The 4.8.8 tiling is composed of regular squares and regular octagons in a 1:1 ratio, with every vertex of degree 3 in the cell-adjacency graph (vertex configuration 4.8.8; symmetry group p4mm). An `n`-cell connected hole `H` is a connected set of `n` cells (squares or octagons). The corona `C(H)` is the set of cells edge-adjacent to `H` but not in `H`. A connected enclosing shell `S` is a connected superset of `C(H)`, disjoint from `H`, such that the cells outside `H union S` also form a connected set. `a(n)` is the minimum `|S|` over all valid `(H, S)`.
+For `n >= 1`, `a(n)` is the smallest number of cells in a connected ring (a "shell") that completely encloses a connected `n`-cell hole on the truncated-square (4.8.8) Archimedean tiling. The 4.8.8 tiling is made of regular squares and regular octagons in a 1:1 ratio; every vertex has degree 3, and the symmetry group is `p4mm`.
 
-This is the truncated-square analog of [A283056](https://oeis.org/A283056) (square grid) and [A182619](https://oeis.org/A182619) (hexagonal grid). [A227004](https://oeis.org/A227004) is the coordination sequence for the same tiling but encodes a different "shell" notion (concentric coordination shells around a vertex), included here only to disambiguate.
+Precisely: a hole `H` is a connected set of `n` cells (squares or octagons). The corona `C(H)` is the set of cells edge-adjacent to `H` but not in `H`. A shell `S` is a connected superset of `C(H)`, disjoint from `H`, such that the cells outside `H union S` also form a connected set. `a(n) = min |S|`.
+
+This is the truncated-square analog of [A283056](https://oeis.org/A283056) (square grid) and [A182619](https://oeis.org/A182619) (hexagonal grid). [A227004](https://oeis.org/A227004) is the coordination sequence on the same tiling -- a different "shell" notion, included only as a disambiguation pointer.
 
 ## Results
 
@@ -16,66 +18,51 @@ This is the truncated-square analog of [A283056](https://oeis.org/A283056) (squa
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | **a(n)** | **4** | **8** | **8** | **8** | **8** | **10** | **10** | **10** | **12** | **12** | **12** | **12** | **12** | **14** | **14** | **14** | **14** | **14** | **16** | **16** |
 
-Each value `a(n) = k + 1` is sandwich-proved by:
+Each value `a(n) = k + 1` is proved both ways:
 
-- **Upper bound:** a witness shell `S` with `|S| = k + 1` from a Cython implementation of Redelmeier's polyform enumeration on a finite BFS patch (radius 8) of the 4.8.8 tiling. The witness is independently re-checked by a pure-Python geometric verifier with a disjoint code path from the solver (vertex-intersection face adjacency, BFS connectivity, set-inclusion corona check; no SAT backend, no Cython enumerator, no shared imports). Verifier verdict: PASS for every `n = 1..20`.
-- **Lower bound:** a `drat-trim`-certified UNSAT at `k` from a PySAT three-partition (hole / shell / exterior) CNF encoder under a CEGAR connectivity loop. Verdict `s VERIFIED` for every `n = 1..20`. The original DRAT proofs are not committed (see `research/drat/README.md`); the CNF + sidecar (with SHA-256 + verdict) are sufficient to regenerate and re-check.
+- **Upper bound (`a(n) <= k + 1`).** An exhaustive computer search over all connected `n`-cell holes on a finite patch of the tiling (radius 8) finds at least one hole whose corona has size `k + 1`.
+- **Lower bound (`a(n) >= k + 1`).** A SAT solver proves that no valid hole-shell pair with shell of size at most `k` exists. The machine-checkable proof certificate is independently re-verified by `drat-trim` (verdict `s VERIFIED` on every term).
+- **Cross-check.** Every upper-bound witness is independently re-checked by a separate pure-Python geometric verifier with a disjoint code path: PASS for every `n = 1..20`.
 
 ## Conjecture
 
 Three structural conjectures match all 20 proved values (UNVERIFIED for `n > 20`):
 
-- **C1 (Corona-Equals-Shell on 4.8.8).** For every connected hole `H`, the minimum enclosing shell coincides with the corona, `|S| = |C(H)|`, with `comps(H) = 1`, `bridge_count = 0`, and `extra = 0` in the unified shell formula. A discrete Gauss-Bonnet argument shows that vertex degree 3 forces the corona of any connected hole to itself be connected (a necessary condition for shell == corona); the further claim that the minimum shell *equals* the corona is empirical.
-- **C2 (Monotonicity).** `a(n)` is non-decreasing in `n`.
-- **C3 (Plateau-and-jump cadence).** For `n >= 3`, `a(n) - a(n - 1)` is in `{0, 2}`. The unique `+4` transition `a(1) = 4 -> a(2) = 8` is structural to the leading edge: every 2-cell connected hole on 4.8.8 contains at least one octagon (no two squares are edge-adjacent), and the corona of a square plus an adjacent octagon has exactly 8 cells.
-
-The `+3` shell identity that holds on the regular square grid (Kamenetsky comment on [A283056](https://oeis.org/A283056)) and the regular hexagonal grid ([A182619](https://oeis.org/A182619)) does NOT extend to the 4.8.8 tiling.
+- **C1 (Corona-Equals-Shell on 4.8.8).** For every connected hole `H`, the minimum enclosing shell equals the corona itself: `|S| = |C(H)|`. Half of this is forced by the geometry: every vertex of the 4.8.8 tiling has degree 3, which implies the corona of any connected hole is connected (a necessary condition for "shell equals corona"). The rest -- that the corona is also *sufficient* and no smaller shell exists -- is empirical for `n = 1..20`.
+- **C2 (Monotonicity).** `a(n)` is non-decreasing.
+- **C3 (Plateau-and-jump cadence).** For `n >= 3`, `a(n) - a(n - 1)` is in `{0, 2}`: the sequence either stays flat or jumps by exactly 2. The unique `+4` step `a(1) = 4 -> a(2) = 8` is special to the leading edge -- every 2-cell connected hole on 4.8.8 contains at least one octagon (no two squares are edge-adjacent), and the corona of a square plus an adjacent octagon has exactly 8 cells.
 
 ## Running the Solver
 
-> **Note.** The scripts in `code/` are not runnable as-is from this repository alone. They import from a private shared-library monorepo (`sat_utils`, `figure_gen_utils`) that is not published here. The code is shipped as a reference for the method and for diff-style audit against the proof artefacts in `research/`. The proofs themselves -- the witness JSONs and the drat-trim `s VERIFIED` records in the sidecars -- are self-contained in `research/drat/` and can be re-verified with stock open-source binaries without running the solver.
+> **Note.** The scripts in `code/` are not runnable as-is. They import from a private shared-library monorepo (`sat_utils`, `figure_gen_utils`) that is not published here and are shipped only as a reference for the method. The proofs themselves -- in `research/drat/` (CNF + witness JSON + sidecar) -- are self-contained and re-verifiable with two stock open-source binaries.
 
-**Requirements (for reference only):** Python 3.10+, `python-sat` (PySAT), the Cython enumerator from the private `sat_utils.tiling_enum` module, plus the external binary `drat-trim` for re-verification.
-
-**Re-verifying any UNSAT lower bound from this repo alone:**
+**Re-verifying any lower bound from this repo alone:**
 
 ```bash
-# Example: re-check the n = 6 lower bound (a(6) = 10 proved by UNSAT at k = 9).
-# Two open-source binaries are needed: cadical (any 1.x or later) and drat-trim.
+# Example: re-check the n = 6 lower bound (a(6) = 10, proved by UNSAT at k = 9).
 cadical research/drat/n6_k9.cnf --no-binary --proof n6_k9.drat --threads=1
 drat-trim research/drat/n6_k9.cnf n6_k9.drat
 # Expected: "s VERIFIED"
 ```
 
-The same chain works for every `n` in 1..20. Approximate single-term wall time on a laptop: seconds for `n` in 1..10, minutes for 11..15, minutes-to-hours for 16..18, several hours each for `n = 19, 20`. See `research/drat/README.md` for the per-n file layout, the rationale for not shipping the original DRATs, and the witness specification.
-
-**Example solver command (requires the private monorepo):**
-
-```bash
-# Witness + DRAT certificate for n = 1..20
-python code/solve_truncsq_shell.py --n 1-20 --per-term-timeout 3600 \
-    --emit-drat --check-drat --check-method drat
-
-# Independent witness verification (pure-Python, disjoint code path)
-python code/verify_method1.py 20
-```
+The same chain works for every `n` in 1..20. Approximate single-term wall time on a laptop: seconds for `n` in 1..10, minutes for 11..15, minutes to about an hour for 16..18, several hours each for `n = 19, 20`. See `research/drat/README.md` for the per-`n` file layout, the rationale for not shipping the original DRAT files, and the witness specification.
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `code/solve_truncsq_shell.py` | Primary solver (reference) -- Cython Redelmeier enumeration + DRAT proof emission |
-| `code/verify_method1.py` | Independent geometric witness verifier (reference, pure-Python, disjoint code path) |
-| `research/solver-results.json` | Machine-readable witnesses + structural metadata for `n = 1..20` |
+| `code/solve_truncsq_shell.py` | Primary solver (reference) |
+| `code/verify_method1.py` | Independent geometric witness verifier (reference) |
+| `research/solver-results.json` | Witnesses and structural metadata for `n = 1..20` |
 | `research/solver-run-log.txt` | Solver stdout log |
 | `research/verify_method1-results.json` | Geometric verifier results (every `n` PASS) |
 | `research/verify_method1-run-log.txt` | Geometric verifier run log |
-| `research/drat/` | CNF, witness JSON, and sidecar (with SHA-256 + verdict) per `n`. DRATs are not committed; see folder README for regen and verify. |
+| `research/drat/` | CNF, witness JSON, and sidecar per `n`. DRATs not committed; see folder README. |
 | `submission/b394511.txt` | OEIS b-file (`n`, `a(n)`) for `n = 1..20` |
 
 ## Prior Art and Acknowledgments
 
-The closest published analogs are [A283056](https://oeis.org/A283056) (square grid; the Kamenetsky comment proves the `+3` shell identity on the regular square grid) and [A182619](https://oeis.org/A182619) (hexagonal grid; analogous shell sequence). The present sequence is the truncated-square (4.8.8) analog. [A227004](https://oeis.org/A227004) is the coordination sequence for the same tiling but encodes a different concept (concentric coordination shells around a vertex), included here only as a disambiguation pointer.
+The closest published analogs are [A283056](https://oeis.org/A283056) (square grid) and [A182619](https://oeis.org/A182619) (hexagonal grid). [A227004](https://oeis.org/A227004) is the coordination sequence on the same tiling -- a different "shell" concept included only as a disambiguation pointer.
 
 This work was inspired by the [OEIS](https://oeis.org/) and the community of contributors who maintain it.
 
@@ -91,7 +78,7 @@ This work is freely available. If you find it useful, a citation or acknowledgme
 
 ## Links
 
-- **A182619** (minimum enclosing shell on the hexagonal grid -- direct analog): https://oeis.org/A182619
-- **A227004** (coordination sequence for the truncated-square 4.8.8 tiling -- different "shell" concept, disambiguation): https://oeis.org/A227004
-- **A283056** (smallest polyomino admitting a hole of size n on the regular square grid -- direct analog with `+3` identity): https://oeis.org/A283056
+- **A182619** (minimum enclosing shell on the hexagonal grid): https://oeis.org/A182619
+- **A227004** (coordination sequence for the truncated-square 4.8.8 tiling -- different concept): https://oeis.org/A227004
+- **A283056** (smallest polyomino admitting a hole of size n on the square grid): https://oeis.org/A283056
 - **A394511** (this sequence): https://oeis.org/A394511
