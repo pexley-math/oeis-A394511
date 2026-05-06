@@ -10,6 +10,12 @@ Precisely: a hole `H` is a connected set of `n` cells (squares or octagons). The
 
 This is the truncated-square analog of [A283056](https://oeis.org/A283056) (square grid) and [A182619](https://oeis.org/A182619) (hexagonal grid). [A227004](https://oeis.org/A227004) is the coordination sequence on the same tiling -- a different "shell" notion, included only as a disambiguation pointer.
 
+## Animation
+
+[![A394511 truncated-square shell animation](https://github.com/pexley-math/oeis-A394511/raw/main/research/animation.gif)](https://github.com/pexley-math/oeis-A394511/blob/main/research/animation.gif)
+
+The hole `H` grows from a single square cell, with the minimum enclosing shell `C(H)` recomputed at every step. The animation cycles through `n = 1..20`.
+
 ## Results
 
 **New proved terms (this work):**
@@ -59,6 +65,8 @@ The same chain works for every `n` in 1..20. Approximate single-term wall time o
 | `research/verify_method1-run-log.txt` | Geometric verifier run log |
 | `research/drat/` | CNF, witness JSON, and sidecar per `n`. DRATs not committed; see folder README. |
 | `submission/b394511.txt` | OEIS b-file (`n`, `a(n)`) for `n = 1..20` |
+| `code/generate-animation.py` | Manim script that renders `research/animation.gif` |
+| `research/animation.gif` | Animated walk through `a(1..20)` -- hole + shell on the 4.8.8 tiling |
 
 ## Prior Art and Acknowledgments
 
